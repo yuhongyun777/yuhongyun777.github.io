@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Learning Generalizable Model-based Neural Radiance Fields from Multi-view Images.">
-  <meta name="keywords" content="GM-NeRF, SMPL">
+        content="GaussianTalker">
+  <meta name="keywords" content="GuassianTalker, TalkingHead">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GM-NeRF: Learning Generalizable Model-based Neural Radiance Fields from Multi-view Images</title>
+  <title>GaussianTalker</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -79,12 +79,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">GM-NeRF: Learning Generalizable Model-based Neural Radiance Fields from Multi-view Images</h1>
-            <h1 class="title is-size-3" style="color:#5a6268;">CVPR 2023</h1>
+          <h1 class="title is-2 publication-title">GaussianTalker</h1>
+            <!-- <h1 class="title is-size-3" style="color:#5a6268;">CVPR 2023</h1> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Jianchuan Chen</a><sup>1</sup>,</span>
-            <span class="author-block">
+              <a href="">Anonymous Authors</a>,</span>
+            <!-- <span class="author-block">
+              <a href="">Jianchuan Chen</a><sup>1</sup>,</span> -->
+            <!-- <span class="author-block">
               <a href="">Wentao Yi</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://charliememory.github.io">Liqian Ma</a><sup>2</sup>,
@@ -94,18 +96,18 @@
             </span>
             <span class="author-block">
               <a href="https://ice.dlut.edu.cn/IIAU/index.html">Huchuan Lu</a><sup>1</sup>,
-            </span>
+            </span> -->
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Dalian University of Technology, China</span>
             <span class="author-block"><sup>2</sup>ZMO AI Inc.</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Chen_GM-NeRF_Learning_Generalizable_Model-Based_Neural_Radiance_Fields_From_Multi-View_Images_CVPR_2023_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -122,9 +124,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=p4vSrBd9JIs"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -132,9 +134,9 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/JanaldoChen/GM-NeRF"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -142,7 +144,7 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -151,7 +153,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
         <video id="teaser" autoplay controls muted loop playsinline height="100%">
@@ -169,7 +171,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -180,21 +182,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we focus on synthesizing high-fidelity novel 
-            view images for arbitrary human performers, given a set
-            of sparse multi-view images. It is a challenging task due to
-            the large variation among articulated body poses and heavy
-            self-occlusions. To alleviate this, we introduce an effective generalizable framework Generalizable Model-based
-            Neural Radiance Fields (GM-NeRF) to synthesize free-viewpoint images. Specifically, 
-            we propose a geometry-guided attention mechanism to register the appearance
-            code from multi-view 2D images to a geometry proxy which
-            can alleviate the misalignment between inaccurate geometry prior and pixel space. On top of that, we further conduct
-            neural rendering and partial gradient backpropagation for
-            efficient perceptual supervision and improvement of the perceptual quality of synthesis. To evaluate our method, we
-            conduct experiments on synthesized datasets THuman2.0
-            and Multi-garment, and real-world datasets Genebody and
-            ZJUMocap. The results demonstrate that our approach outperforms state-of-the-art methods in terms of novel view
-            synthesis and geometric reconstruction.
+            Recent work on audio-driven talking head synthesis using neural radiation fields (NeRF) has achieved impressive results. However, due to inadequate posture and expression control caused by NeRF implicit representation, these methods still have some limitations, such as unsynchronized or unnatural lip movements, and visual jitter and artifacts. In this paper, we propose GaussianTalker, a novel method for audio-driven talking head synthesis based on 3D Gaussian Splatting. With the explicit representation property of 3D Gaussians, intuitive control of the facial motion is achieved by binding Gaussians to 3D facial models. GaussianTalker consists of two modules, Speaker-specific Motion Translator and Dynamic Gaussian Renderer. The Speaker-specific Motion Translator achieves accurate lip movements specific to the target speaker through universalized audio feature extraction and customized lip motion generation. The Dynamic Gaussian Renderer introduces Learnable FLAME Embedding for optimizing facial parameters and employs Speaker-specific Blendshapes to enhance facial detail representation via a potential pose, addressing potential issues of visual jitter and artifacts. Extensive experimental results suggest that GaussianTalker outperforms existing state-of-the-art methods in talking head synthesis, delivering precise lip synchronization and exceptional visual quality. Our method achieves rendering speeds of 130 FPS on NVIDIA GPU, significantly exceeding the threshold for real-time rendering performance, and can potentially be deployed on other hardware platforms.
           </p>
         </div>
       </div>
@@ -202,7 +190,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
             <h2 class="title is-3">Video</h2>
             <div class="publication-video">
@@ -210,7 +198,7 @@
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -224,17 +212,12 @@
         <div class="content has-text-justified">
           <h2 class="title is-3 has-text-centered"><p>Framework Overview</p></h2>
           <div class="has-text-centered">
-            <img style="width: 100%;" src="./images/Framework.png"
-                 alt="GM-NeRF architecture."/>
+            <img style="width: 100%;" src="./images/gaussiantalk_framework.png"
+                 alt="GaussianTalker architecture."/>
           </div>
           <p>
-            Given m calibrated multi-view images and registered SMPL, we build the generalizable
-            model-based neural human radiance field. First, we utilize the image encoder to extract multi-view image features, which are used to
-            provide geometric and appearance information, respectively. In order to adequately exploit the geometric prior, we propose the visibility-based attention mechanism to construct a structured geometric body embedding, which is further diffused to form a geometric feature
-            volume. For any spatial point x, we trilinearly interpolate the feature volume G to obtain the geometric code g(x). In addition, we also
-            propose geometry-guided attention to obtain the appearance code a(x, d) directly from the multi-view image features. We then feed the
-            geometric code g(x) and appearance code a(x, d) into the MLP network to build the neural feature field (f, σ) = F(g(x), a(x, d)).
-            Finally, we employ volume rendering and neural rendering to generate the novel view image.
+            A novel framework for audio-driven talking head synthesis that utilizes 3D Gaussian Splatting bound to FLAME,
+            achieving high-quality visual rendering via a bidirectional alignment of facial parameter distributions.
           </p>
         </div>
 
@@ -247,10 +230,9 @@
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
     <div class="hero-body">
-        
-        <!-- Novel View Synthesis -->
+
 
         <div class="container has-text-centered">
 
@@ -298,11 +280,7 @@
     
         </div>
 
-        <!--/ Novel View Synthesis -->
-
         <br/>
-
-        <!-- 3D Reconstruction. -->
         <div class="content has-text-justified">
             <h2 class="title is-3 has-text-centered"><p>3D Reconstruction</p></h2>
             <div class="has-text-centered">
@@ -310,12 +288,8 @@
                    alt="Comparsion_Geometry."/>
             </div>
           </div>
-  
-        <!--/3D Reconstruction. -->
 
         <br/>
-
-        <!-- Demos -->
 
         <div class="container has-text-centered">
 
@@ -398,14 +372,11 @@
             </div>
     
         </div>
-
-        <!--/ Demos -->
-
     </div>
 </section>
-  
+   -->
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{chen2023gmnerf,
@@ -420,7 +391,7 @@
         year = {2023}
         }</code></pre>
     </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
